@@ -40,7 +40,7 @@ def status (conn, posicion):
 
 def get_indice_nombre_10(conn):
 
-    """selects and returns the first row in a simple database with a simple condition"""
+    """selects and returns the first row in a database with a simple condition"""
    
     cur = conn.cursor() 
    
@@ -74,6 +74,7 @@ def get_indice_10 (conn):
 def get_indice_5 (conn):
     
     """selects and returns the first row in a simple database with a simple condition based on the ID"""  
+    
     cur = conn.cursor()
     cur.execute("SELECT id, * FROM Indices WHERE vol = 5")
    
@@ -136,7 +137,7 @@ def main_1():
     
     """search and modify in a database based on previously defined functions"""
     
-    database = r"C:/Users/andres.muriel/Desktop/Proyecto Indices/Estado actual de los indices.db"
+    database = r"directory_of_your_db"
     conn = create_connection(database)
     
     with conn:                      
@@ -171,9 +172,9 @@ def main_1():
 
 def main_2():
     
-    """updates a single row in a database based on user input"""
+    """updates a single cell in a database based on user input"""
    
-    database = r"C:/Users/andres.muriel/Desktop/Proyecto Indices/Estado actual de los indices.db"
+    database = r"directory_of_your_db"
     conn = create_connection(database)
     
     with conn:                              
@@ -182,14 +183,14 @@ def main_2():
         sg.Print("Indize", ente, "entsorgt")
 
 
-#Interfaz gráfica
+#Graphic Interface
 
 
 
 sg.theme("Dark Teal 7")
 
 
-database = r"C:/Users/andres.muriel/Desktop/Proyecto Indices/Estado actual de los indices.db"
+database = r"directory_of_your_db"
 conn = create_connection(database)
 
 
@@ -234,82 +235,82 @@ while True:
 window.close()        
         
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
     main_1()
     main_2()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 """
 @author: Andres.Muriel
